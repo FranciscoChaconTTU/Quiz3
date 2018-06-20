@@ -1,17 +1,23 @@
 def dot(vector01,vector02):
+  if type(vector01) != list or type(vector02) != list:
+    print ("invalid input")
+    return False
+  if len(vector01)==0 or len(vector02)==0:
+    print ("invalid input")  
+    return False
   if len(vector01)==len(vector02):
     x = 0
-    for i in range(vector01):
-      for j in range(vector02):
-        x+=[i]*[j]
-      return x
+    for i in range(len(vector01)):
+      x+=vector01[i]*vector02[i]
+    return x
   else:
-    return "invalid input"
+    print ("invalid input")
+    return None
 
-vector01=(1,2,3)
-vector02=(4,5,6)
+vector01=[1,2,3]
+vector02=[4,5,6]
 
-#print (dot(vector01,vector02))
+print (dot(vector01,vector02))
 
 def vecSubtract(vector01,vector02):
   if len(vector01[0])==len(vector02[0]):
