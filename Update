@@ -20,12 +20,11 @@ vector02=[4,5,6]
 print (dot(vector01,vector02))
 
 def vecSubtract(vector01,vector02):
-  if len(vector01[0])==len(vector02[0]):
-    x = [] 
-    for i in range(vector01[0]):
-      for j in range(vector02[0]):
-        x.append([i]-[j])    
-      return x
+  if len(vector01)==len(vector02):
+    x = []
+    for i in range(len(vector01)):
+        x.append(vector01[i]-vector02[i])    
+    return x
   else:
     return "invalid input"
 
