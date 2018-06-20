@@ -44,4 +44,17 @@ vector=[1,2,3]
 
 print (scalarVecMulti(scalar,vector))
 
+def infNorm(vector):
+  x=0
+  for i in range(len(vector)):
+    if abs(vector[i]) > x:
+      x= abs(vector[i]) 
+  return x
+
+vector=[1,2,3,4,-5]
+
+print (infNorm(vector))
+
+
+
 
