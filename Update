@@ -55,6 +55,18 @@ vector=[1,2,3,4,-5]
 
 print (infNorm(vector))
 
+def normalize(vector):
+  x=[]
+  y=0
+  for i in range(len(vector)):
+    y+=vector[i]**2
+  return (math.sqrt(y))
+  x.append(vector[i]/math.sqrt(y))
+  return x
+
+vector=[3,4]
+print (normalize(vector))
+
 
 
 
