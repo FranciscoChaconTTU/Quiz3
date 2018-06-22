@@ -1,3 +1,4 @@
+import math
 def dot(vector01,vector02):
   if type(vector01) != list or type(vector02) != list:
     print ("invalid input")
@@ -17,7 +18,7 @@ def dot(vector01,vector02):
 vector01=[1,2,3]
 vector02=[4,5,6]
 
-print (dot(vector01,vector02))
+#print (dot(vector01,vector02))
 
 def vecSubtract(vector01,vector02):
   if len(vector01)==len(vector02):
@@ -28,10 +29,10 @@ def vecSubtract(vector01,vector02):
   else:
     return "invalid input"
 
-vector01=[1,2,3]
-vector02=[4,5,6]
+vector03=[1,2,3]
+vector04=[4,5,6]
 
-print (vecSubtract(vector01,vector02))
+#print (vecSubtract(vector01,vector02))
 
 def scalarVecMulti(scalar,vector):
   x=[]
@@ -39,10 +40,10 @@ def scalarVecMulti(scalar,vector):
     x.append(scalar*vector[i])
   return x
 
-scalar=10
-vector=[1,2,3]
+scalar01=10
+vector05=[1,2,3]
 
-print (scalarVecMulti(scalar,vector))
+#print (scalarVecMulti(scalar,vector))
 
 def infNorm(vector):
   x=0
@@ -51,22 +52,16 @@ def infNorm(vector):
       x= abs(vector[i]) 
   return x
 
-vector=[1,2,3,4,-5]
+vector06=[1,2,3,4,-5]
 
-print (infNorm(vector))
+#print (infNorm(vector))
 
 def normalize(vector):
-  x=[]
-  y=0
+  x=infNorm(vector)
+  y=[]
   for i in range(len(vector)):
-    y+=vector[i]**2
-  return (math.sqrt(y))
-  x.append(vector[i]/math.sqrt(y))
-  return x
+    y.append(vector[i]/x)
+  return (y)
 
-vector=[3,4]
-print (normalize(vector))
-
-
-
-
+vector07=[3,4]
+#print (normalize(vector))
